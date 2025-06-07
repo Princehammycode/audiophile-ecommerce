@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Audiophile - Product</title> <!-- Title will be updated by JS -->
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;700&display=swap" rel="stylesheet">
+</head>
+<body id="product-page">
+     <div class="page-dots page-dots-left"></div>
+     <div class="page-dots page-dots-right"></div>
+
+    <header>
+        <!-- Same header as index.html -->
+        <div class="container header-container">
+            <button class="hamburger-icon" aria-label="Open menu" aria-expanded="false">
+                <img src="assets/shared/tablet/icon-hamburger.svg" alt="Menu">
+            </button>
+            <a href="index.html" class="logo">audiophile</a>
+            <nav class="desktop-nav">
+                <ul>
+                    <li><a href="index.html">HOME</a></li>
+                    <li><a href="category.html?name=headphones">HEADPHONES</a></li>
+                    <li><a href="category.html?name=speakers">SPEAKERS</a></li>
+                    <li><a href="category.html?name=earphones">EARPHONES</a></li>
+                </ul>
+            </nav>
+            <button class="cart-button" aria-label="Shopping cart">
+                <img src="assets/shared/desktop/icon-cart.svg" alt="Cart">
+                <span class="cart-count"></span>
+            </button>
+        </div>
+        <div class="mobile-nav-container">
+            <nav class="mobile-nav">
+                <div class="categories-nav-mobile">
+                    <!-- Dynamically filled or static like homepage -->
+                </div>
+            </nav>
+        </div>
+    </header>
+
+    <main class="product-main">
+        <div class="container">
+            <a href="javascript:history.back()" class="back-link">Go Back</a>
+            <div id="product-detail-container">
+                <!-- Product details loaded here -->
+            </div>
+
+            <section class="product-features-includes">
+                <div class="features-section">
+                    <h3>Features</h3>
+                    <div id="product-features"></div>
+                </div>
+                <div class="in-the-box-section">
+                    <h3>In the box</h3>
+                    <ul id="product-includes"></ul>
+                </div>
+            </section>
+
+            <section class="product-gallery" id="product-gallery-container">
+                <!-- Product gallery images loaded here -->
+            </section>
+
+            <section class="related-products">
+                <h3>You may also like</h3>
+                <div class="related-products-grid" id="related-products-container">
+                    <!-- Related products loaded here -->
+                </div>
+            </section>
+        </div>
+    </main>
+
+    <section class="categories" id="shared-categories-section">
+        <!-- Same categories section as index.html -->
+        <div class="container">
+             <div class="category-grid">
+                 <div class="category-card">
+                     <img src="assets/shared/desktop/image-category-thumbnail-headphones.png" alt="Headphones" class="category-thumb">
+                     <h3>Headphones</h3>
+                     <a href="category.html?name=headphones" class="shop-link">SHOP <span class="arrow">></span></a>
+                 </div>
+                 <div class="category-card">
+                     <img src="assets/shared/desktop/image-category-thumbnail-speakers.png" alt="Speakers" class="category-thumb">
+                     <h3>Speakers</h3>
+                     <a href="category.html?name=speakers" class="shop-link">SHOP <span class="arrow">></span></a>
+                 </div>
+                 <div class="category-card">
+                     <img src="assets/shared/desktop/image-category-thumbnail-earphones.png" alt="Earphones" class="category-thumb">
+                     <h3>Earphones</h3>
+                     <a href="category.html?name=earphones" class="shop-link">SHOP <span class="arrow">></span></a>
+                 </div>
+             </div>
+         </div>
+    </section>
+
+    <section class="about-gear" id="shared-about-gear-section">
+        <!-- Same about-gear section as index.html -->
+        <div class="container about-gear-container">
+             <div class="about-gear-content">
+                 <h2>Bringing you the <span class="highlight">best</span> audio gear</h2>
+                 <p>
+                     Located at the heart of New York City, Audiophile is the premier
+                     store for high end headphones, earphones, speakers, and audio
+                     accessories. We have a large showroom and luxury
+                     demonstration rooms available for you to browse and
+                     experience a wide range of our products. Stop by our store to
+                     meet some of the fantastic people who make Audiophile the
+                     best place to buy your portable audio equipment.
+                 </p>
+             </div>
+             <div class="about-gear-image">
+                 <picture>
+                     <source media="(max-width: 767px)" srcset="assets/shared/mobile/image-best-gear.jpg">
+                     <source media="(max-width: 1023px)" srcset="assets/shared/tablet/image-best-gear.jpg">
+                     <img src="assets/shared/desktop/image-best-gear.jpg" alt="Man enjoying music with Audiophile headphones">
+                 </picture>
+             </div>
+         </div>
+    </section>
+
+    <footer>
+        <!-- Same footer as index.html -->
+         <div class="container">
+         <div class="footer-top">
+             <a href="index.html" class="logo">audiophile</a>
+             <nav class="footer-nav">
+                 <ul>
+                     <li><a href="index.html">HOME</a></li>
+                     <li><a href="category.html?name=headphones">HEADPHONES</a></li>
+                     <li><a href="category.html?name=speakers">SPEAKERS</a></li>
+                     <li><a href="category.html?name=earphones">EARPHONES</a></li>
+                 </ul>
+             </nav>
+         </div>
+         <p class="footer-description">
+             Audiophile is an all in one stop to fulfill your audio needs. We're a small team
+             of music lovers and sound specialists who are devoted to helping you get the
+             most out of personal audio. Come and visit our demo facility - we’re open 7
+             days a week.
+         </p>
+         <div class="footer-bottom">
+             <p class="copyright">Copyright 2024. All Rights Reserved</p>
+             <div class="social-icons">
+                 <a href="#" aria-label="Facebook"><img src="assets/shared/desktop/icon-facebook.svg" alt="Facebook"></a>
+                 <a href="#" aria-label="Twitter"><img src="assets/shared/desktop/icon-twitter.svg" alt="Twitter"></a>
+                 <a href="#" aria-label="Instagram"><img src="assets/shared/desktop/icon-instagram.svg" alt="Instagram"></a>
+             </div>
+         </div>
+     </div>
+    </footer>
+
+     <!-- Cart Modal -->
+     <div id="cart-modal" class="cart-modal-overlay" style="display: none;">
+         <div class="cart-modal-content">
+            <div class="cart-modal-header">
+                <h3>Cart (<span id="cart-modal-count">0</span>)</h3>
+                <button id="cart-remove-all" class="link-button">Remove all</button>
+            </div>
+            <div id="cart-modal-items">
+                {/* Cart items will be rendered here by js/cart.js */}
+                <p class="cart-empty-message">Your cart is empty.</p>
+            </div>
+            <div class="cart-modal-total">
+                <span>TOTAL</span>
+                <span id="cart-modal-total-price">$0</span>
+            </div>
+            <a href="checkout.html" id="cart-checkout-button" class="btn btn-primary btn-full-width" style="display:none;">CHECKOUT</a>
+        </div>
+     </div>
+
+    <script src="js/dataService.js"></script>
+    <script src="js/cart.js"></script>
+    <script src="js/productRenderer.js"></script>
+    <script src="js/main.js"></script>
+</body>
+</html>

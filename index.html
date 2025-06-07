@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Audiophile e-commerce</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;700&display=swap" rel="stylesheet">
+</head>
+<body id="home-page">
+    <div class="page-dots page-dots-left">
+        <!-- Decorative dots -->
+    </div>
+    <div class="page-dots page-dots-right">
+        <!-- Decorative dots -->
+    </div>
+
+    <header>
+        <div class="container header-container">
+            <button class="hamburger-icon" aria-label="Open menu" aria-expanded="false">
+                <img src="assets/shared/tablet/icon-hamburger.svg" alt="Menu">
+            </button>
+            <a href="index.html" class="logo">audiophile</a>
+            <nav class="desktop-nav">
+                <ul>
+                    <li><a href="index.html">HOME</a></li>
+                    <li><a href="category.html?name=headphones">HEADPHONES</a></li>
+                    <li><a href="category.html?name=speakers">SPEAKERS</a></li>
+                    <li><a href="category.html?name=earphones">EARPHONES</a></li>
+                </ul>
+            </nav>
+            <button class="cart-button" aria-label="Shopping cart">
+                <img src="assets/shared/desktop/icon-cart.svg" alt="Cart">
+                <span class="cart-count"></span>
+            </button>
+        </div>
+        <div class="mobile-nav-container">
+            <nav class="mobile-nav">
+                 <div class="categories-nav-mobile">
+                    {/* Content for mobile nav categories can be static as in original
+                        or dynamically loaded by js/main.js if renderMobileNavCategories is called */}
+                    <div class="category-card" style="margin-top: -105px;">
+                        <img src="assets/shared/desktop/image-category-thumbnail-headphones.png" alt="Headphones" class="category-thumb">
+                        <h3>Headphones</h3>
+                        <a href="category.html?name=headphones" class="shop-link">SHOP <span class="arrow">></span></a>
+                    </div>
+                    <div class="category-card">
+                        <img src="assets/shared/desktop/image-category-thumbnail-speakers.png" alt="Speakers" class="category-thumb">
+                        <h3>Speakers</h3>
+                        <a href="category.html?name=speakers" class="shop-link">SHOP <span class="arrow">></span></a>
+                    </div>
+                    <div class="category-card">
+                        <img src="assets/shared/desktop/image-category-thumbnail-earphones.png" alt="Earphones" class="category-thumb">
+                        <h3>Earphones</h3>
+                        <a href="category.html?name=earphones" class="shop-link">SHOP <span class="arrow">></span></a>
+                    </div>
+                </div>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <section class="hero">
+            <div class="container hero-content-container">
+                <div class="hero-text">
+                    <p class="overline">NEW PRODUCT</p>
+                    <h1>XX99 Mark II<br>Headphones</h1>
+                    <p class="description">
+                        Experience natural, lifelike audio and exceptional
+                        build quality made for the passionate music
+                        enthusiast.
+                    </p>
+                    <a href="product.html?slug=xx99-mark-two-headphones" class="btn btn-primary">SEE PRODUCT</a>
+                </div>
+                <div class="hero-image-container">
+                </div>
+            </div>
+        </section>
+
+        <section class="categories" id="shared-categories-section-home">
+            <div class="container">
+                <div class="category-grid">
+                    <div class="category-card">
+                        <img src="assets/shared/desktop/image-category-thumbnail-headphones.png" alt="Headphones" class="category-thumb">
+                        <h3>Headphones</h3>
+                        <a href="category.html?name=headphones" class="shop-link">SHOP <span class="arrow">></span></a>
+                    </div>
+                    <div class="category-card">
+                        <img src="assets/shared/desktop/image-category-thumbnail-speakers.png" alt="Speakers" class="category-thumb">
+                        <h3>Speakers</h3>
+                        <a href="category.html?name=speakers" class="shop-link">SHOP <span class="arrow">></span></a>
+                    </div>
+                    <div class="category-card">
+                        <img src="assets/shared/desktop/image-category-thumbnail-earphones.png" alt="Earphones" class="category-thumb">
+                        <h3>Earphones</h3>
+                        <a href="category.html?name=earphones" class="shop-link">SHOP <span class="arrow">></span></a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="featured-products">
+            <div class="container">
+                <div class="featured-item featured-zx9">
+                    <div class="featured-zx9-image">
+                        <picture>
+                            <source media="(max-width: 767px)" srcset="assets/home/mobile/image-speaker-zx9.png">
+                            <source media="(max-width: 1023px)" srcset="assets/home/tablet/image-speaker-zx9.png">
+                            <img src="assets/home/desktop/image-speaker-zx9.png" alt="ZX9 Speaker">
+                        </picture>
+                    </div>
+                    <div class="featured-zx9-content">
+                        <h2>ZX9<br>Speaker</h2>
+                        <p>Upgrade to premium speakers that are phenomenally built to deliver truly remarkable sound.</p>
+                        <a href="product.html?slug=zx9-speaker" class="btn btn-secondary">SEE PRODUCT</a>
+                    </div>
+                </div>
+
+                <div class="featured-item featured-zx7">
+                    <div class="featured-zx7-content">
+                        <h2>ZX7 Speaker</h2>
+                        <a href="product.html?slug=zx7-speaker" class="btn btn-tertiary">SEE PRODUCT</a>
+                    </div>
+                </div>
+
+                <div class="featured-item featured-yx1">
+                    <div class="featured-yx1-image">
+                        <picture>
+                            <source media="(max-width: 767px)" srcset="assets/home/mobile/image-earphones-yx1.jpg">
+                            <source media="(max-width: 1023px)" srcset="assets/home/tablet/image-earphones-yx1.jpg">
+                            <img src="assets/home/desktop/image-earphones-yx1.jpg" alt="YX1 Earphones">
+                        </picture>
+                    </div>
+                    <div class="featured-yx1-content">
+                        <h2>YX1 Earphones</h2>
+                        <a href="product.html?slug=yx1-earphones" class="btn btn-tertiary" style="width: 170px;">SEE PRODUCT</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="about-gear" id="shared-about-gear-section-home">
+            <div class="container about-gear-container">
+                <div class="about-gear-content">
+                    <h2>Bringing you the <span class="highlight">best</span> audio gear</h2>
+                    <p>
+                        Located at the heart of New York City, Audiophile is the premier
+                        store for high end headphones, earphones, speakers, and audio
+                        accessories. We have a large showroom and luxury
+                        demonstration rooms available for you to browse and
+                        experience a wide range of our products. Stop by our store to
+                        meet some of the fantastic people who make Audiophile the
+                        best place to buy your portable audio equipment.
+                    </p>
+                </div>
+                <div class="about-gear-image">
+                    <picture>
+                        <source media="(max-width: 767px)" srcset="assets/shared/mobile/image-best-gear.jpg">
+                        <source media="(max-width: 1023px)" srcset="assets/shared/tablet/image-best-gear.jpg">
+                        <img src="assets/shared/desktop/image-best-gear.jpg" alt="Man enjoying music with Audiophile headphones">
+                    </picture>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <div class="footer-top">
+                <a href="index.html" class="logo">audiophile</a>
+                <nav class="footer-nav">
+                    <ul>
+                        <li><a href="index.html">HOME</a></li>
+                        <li><a href="category.html?name=headphones">HEADPHONES</a></li>
+                        <li><a href="category.html?name=speakers">SPEAKERS</a></li>
+                        <li><a href="category.html?name=earphones">EARPHONES</a></li>
+                    </ul>
+                </nav>
+            </div>
+            <p class="footer-description">
+                Audiophile is an all in one stop to fulfill your audio needs. We're a small team
+                of music lovers and sound specialists who are devoted to helping you get the
+                most out of personal audio. Come and visit our demo facility - we're open 7
+                days a week.
+            </p>
+            <div class="footer-bottom">
+                <p class="copyright">Copyright 2024. All Rights Reserved</p>
+                <div class="social-icons">
+                    <a href="#" aria-label="Facebook"><img src="assets/shared/desktop/icon-facebook.svg" alt="Facebook"></a>
+                    <a href="#" aria-label="Twitter"><img src="assets/shared/desktop/icon-twitter.svg" alt="Twitter"></a>
+                    <a href="#" aria-label="Instagram"><img src="assets/shared/desktop/icon-instagram.svg" alt="Instagram"></a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <div id="cart-modal" class="cart-modal-overlay" style="display: none;">
+        <div class="cart-modal-content">
+            <div class="cart-modal-header">
+                <h3>Cart (<span id="cart-modal-count">0</span>)</h3>
+                <button id="cart-remove-all" class="link-button">Remove all</button>
+            </div>
+            <div id="cart-modal-items">
+                {/* Cart items will be rendered here by js/cart.js */}
+                <p class="cart-empty-message">Your cart is empty.</p>
+            </div>
+            <div class="cart-modal-total">
+                <span>TOTAL</span>
+                <span id="cart-modal-total-price">$0</span>
+            </div>
+
+            <a href="checkout.html" id="cart-checkout-button" class="btn btn-primary btn-full-width" style="display:none;">CHECKOUT</a>
+        </div>
+    </div>
+
+    <script src="js/dataService.js"></script> 
+    <script src="js/cart.js"></script>         
+    <script src="js/productRenderer.js"></script>
+    <script src="js/main.js"></script>         
+</body>
+</html>
