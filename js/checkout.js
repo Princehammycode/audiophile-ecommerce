@@ -1,4 +1,3 @@
-// js/checkout.js
 document.addEventListener('DOMContentLoaded', () => {
     if (document.body.id !== 'checkout-page') return;
 
@@ -41,7 +40,7 @@ document.addEventListener('DOMContentLoaded', () => {
         });
 
         const subtotal = getCartSubtotal();
-        const vat = getVAT(); // VAT calculated on product total
+        const vat = getVAT();
 
         summarySubtotalEl.textContent = `$${subtotal.toLocaleString()}`;
         summaryShippingEl.textContent = `$${SHIPPING_COST.toLocaleString()}`;
@@ -52,13 +51,13 @@ document.addEventListener('DOMContentLoaded', () => {
     function handlePaymentMethodChange() {
         const selectedPayment = document.querySelector('input[name="paymentMethod"]:checked').value;
         if (selectedPayment === 'e-money') {
-            emoneyDetailsDiv.style.display = 'grid'; // or 'flex' based on your CSS
+            emoneyDetailsDiv.style.display = 'grid'; 
             codDetailsDiv.style.display = 'none';
             emoneyNumberInput.required = true;
             emoneyPinInput.required = true;
         } else { // Cash on Delivery
             emoneyDetailsDiv.style.display = 'none';
-            codDetailsDiv.style.display = 'flex'; // Show COD message
+            codDetailsDiv.style.display = 'flex'; 
             emoneyNumberInput.required = false;
             emoneyPinInput.required = false;
         }
@@ -70,7 +69,7 @@ document.addEventListener('DOMContentLoaded', () => {
         event.preventDefault();
         if (validateForm()) {
             showOrderConfirmation();
-            clearCart(); // Clear cart after successful order
+            clearCart(); 
         }
     });
 
@@ -135,14 +134,13 @@ document.addEventListener('DOMContentLoaded', () => {
         return emailRegex.test(email);
     }
     function isValidPhone(phone) {
-         // Example: +1 202-555-0136 or 2025550136 etc. Very basic.
          const phoneRegex = /^[+]?[\s./0-9]*[(]{0,1}[0-9]{1,4}[)]{0,1}[\s./0-9]*$/;
          return phoneRegex.test(phone) && phone.replace(/\D/g, '').length >= 7;
      }
 
 
     inputs.forEach(input => {
-         input.addEventListener('input', () => { // Or 'blur'
+         input.addEventListener('input', () => {
              const errorSpan = input.closest('.form-group').querySelector('.error-message');
              if (input.value.trim()) {
                  input.classList.remove('input-error');
@@ -159,10 +157,10 @@ document.addEventListener('DOMContentLoaded', () => {
         const confirmationGrandTotalEl = document.getElementById('confirmation-grand-total');
         const viewLessButton = modal.querySelector('.view-less');
 
-        const items = getCartItems(); // Get items *before* clearing cart for summary
-        if (items.length === 0) return; // Should not happen if form submitted
+        const items = getCartItems(); 
+        if (items.length === 0) return; 
 
-        confirmationItemsContainer.innerHTML = ''; // Clear previous
+        confirmationItemsContainer.innerHTML = '';
         const firstItem = items[0];
 
         const firstItemEl = document.createElement('div');
@@ -182,7 +180,7 @@ document.addEventListener('DOMContentLoaded', () => {
             otherItemsEl.classList.add('confirmation-other-items');
             otherItemsEl.textContent = `and ${items.length - 1} other item(s)`;
             confirmationItemsContainer.appendChild(otherItemsEl);
-            if(viewLessButton) viewLessButton.style.display = 'block'; // Show if more than one item type
+            if(viewLessButton) viewLessButton.style.display = 'block'; 
         } else {
             if(viewLessButton) viewLessButton.style.display = 'none';
         }
@@ -192,10 +190,10 @@ document.addEventListener('DOMContentLoaded', () => {
         confirmationGrandTotalEl.textContent = `$${getGrandTotal().toLocaleString()}`;
 
         modal.style.display = 'flex';
-        document.body.style.overflow = 'hidden'; // Prevent background scroll
+        document.body.style.overflow = 'hidden';
     }
 
     // Initial setup
     loadSummary();
-    handlePaymentMethodChange(); // Set initial state of payment details
+    handlePaymentMethodChange();
 });

@@ -1,5 +1,3 @@
-// js/productRenderer.js
-
 function renderProductPreview(product, index, onCategoryPage = true) {
     // Determine image paths (adjust based on your asset structure)
     const imageDesktop = product.categoryImage.desktop;
@@ -71,7 +69,6 @@ function renderProductIncludes(includesArray) {
 }
 
 function renderProductGallery(gallery, productName) {
-    // Assuming gallery object has first, second, third keys with mobile, tablet, desktop sub-keys
     const images = [gallery.first, gallery.second, gallery.third];
     return images.map((imgSet, index) => `
         <picture class="gallery-image gallery-image-${index + 1}">

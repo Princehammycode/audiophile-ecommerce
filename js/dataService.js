@@ -1,8 +1,6 @@
-// js/dataService.js
 const DATA_FILE = 'data.json';
 let productData = null;
 
-// Get the base URL for the current environment
 const getBaseUrl = () => {
     // Check if we're on GitHub Pages
     if (window.location.hostname.includes('github.io')) {

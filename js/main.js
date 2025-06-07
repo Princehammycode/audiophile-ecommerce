@@ -1,4 +1,3 @@
-// js/main.js
 document.addEventListener('DOMContentLoaded', async () => {
     // --- Mobile Navigation ---
     const hamburgerButton = document.querySelector('.hamburger-icon');
@@ -34,8 +33,6 @@ document.addEventListener('DOMContentLoaded', async () => {
          const mobileNavDiv = document.querySelector('.categories-nav-mobile');
          if (!mobileNavDiv || mobileNavDiv.children.length > 0) return; // Already rendered or no container
 
-         // Simple hardcoded version like homepage for now
-         // For dynamic: fetch unique categories from dataService if needed
          mobileNavDiv.innerHTML = `
              <div class="category-card">
                  <img src="assets/shared/desktop/image-category-thumbnail-headphones.png" alt="Headphones" class="category-thumb">
@@ -71,18 +68,18 @@ document.addEventListener('DOMContentLoaded', async () => {
 
     if (cartButton && cartModal) {
         cartButton.addEventListener('click', (e) => {
-            e.stopPropagation(); // Prevent body click from closing it immediately
+            e.stopPropagation();
             cartModal.style.display = cartModal.style.display === 'flex' ? 'none' : 'flex';
             pageBody.style.overflow = cartModal.style.display === 'flex' ? 'hidden' : '';
             if (cartModal.style.display === 'flex') {
-                renderCartModal(); // Re-render when opened
+                renderCartModal();
             }
         });
     }
     // Close cart modal if clicking outside
     if (cartModal) {
          cartModal.addEventListener('click', (event) => {
-             if (event.target === cartModal) { // Clicked on overlay itself
+             if (event.target === cartModal) { 
                  cartModal.style.display = 'none';
                  pageBody.style.overflow = '';
              }
@@ -157,7 +154,7 @@ document.addEventListener('DOMContentLoaded', async () => {
                 // Handle 'NEW PRODUCT' label visibility
                 const overline = sectionElement.querySelector('.overline');
                 if (productData.new) {
-                    if (overline) overline.style.display = 'block'; // Or remove display:none if set
+                    if (overline) overline.style.display = 'block';
                 } else {
                      if (overline) overline.style.display = 'none';
                 }
@@ -205,8 +202,8 @@ document.addEventListener('DOMContentLoaded', async () => {
 
                 if (relatedContainer && product.others && product.others.length > 0) {
                     const relatedProductsHtml = await Promise.all(product.others.map(async other => {
-                        const relatedProdData = await getProductBySlug(other.slug); // Fetch full data if needed, or use provided
-                        return renderRelatedProduct(other); // 'other' already has name, slug, image
+                        const relatedProdData = await getProductBySlug(other.slug); 
+                        return renderRelatedProduct(other);
                     }));
                     relatedContainer.innerHTML = relatedProductsHtml.join('');
                 }
@@ -248,8 +245,6 @@ document.addEventListener('DOMContentLoaded', async () => {
         }
     }
 
-    // Initialize cart (loads from localStorage, updates icon)
     initCart();
-    // Render cart modal content (initially hidden)
     renderCartModal();
 });

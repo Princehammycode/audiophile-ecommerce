@@ -1,7 +1,6 @@
-// js/cart.js
 let cart = [];
 const SHIPPING_COST = 50;
-const VAT_RATE = 0.20; // 20%
+const VAT_RATE = 0.20;
 
 function initCart() {
     const storedCart = localStorage.getItem('audiophileCart');
@@ -81,14 +80,6 @@ function getGrandTotal() {
     const vat = getVAT();
     return subtotal + SHIPPING_COST + vat; 
 }
- // If VAT is added on top of subtotal + shipping:
- // function getGrandTotal() {
- //    const subtotal = getCartSubtotal();
- //    return subtotal + SHIPPING_COST + (subtotal * VAT_RATE);
- // }
- // The design says "VAT (INCLUDED)" suggesting it's part of the displayed price or calculated on product total before shipping.
- // For this implementation, let's assume VAT is calculated on product total and displayed, and grand total includes product + shipping.
- // The prompt says: "VAT calculated at 20% of the product total (excluding shipping)"
 
 function updateCartIconCount() {
     const cartCountSpan = document.querySelector('.cart-count');
