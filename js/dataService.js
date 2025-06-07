@@ -2,12 +2,25 @@
 const DATA_FILE = 'data.json';
 let productData = null;
 
+// Get the base URL for the current environment
+const getBaseUrl = () => {
+    // Check if we're on GitHub Pages
+    if (window.location.hostname.includes('github.io')) {
+        // Get the repository name from the path
+        const pathParts = window.location.pathname.split('/');
+        const repoName = pathParts[1];
+        return `/${repoName}/`;
+    }
+    return '/';
+};
+
 async function fetchData() {
     if (productData) {
         return productData;
     }
     try {
-        const response = await fetch(DATA_FILE);
+        const baseUrl = getBaseUrl();
+        const response = await fetch(`${baseUrl}${DATA_FILE}`);
         if (!response.ok) {
             throw new Error(`HTTP error! status: ${response.status}`);
         }
